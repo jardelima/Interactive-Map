@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mapa Interativo</title>
+
+        <link rel="stylesheet" href="../dist/css/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js" integrity="sha512-tBzZQxySO5q5lqwLWfu8Q+o4VkTcRGOeQGVQ0ueJga4A1RKuzmAu5HXDOXLEjpbKyV7ow9ympVoa6wZLEzRzDg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div class="home" style="background-image: url(./images/background.png);">
+            <div class="container home-container">
+                <div class="clusters" >
+                    <h2><b><span>Mapeamento</span> de Clusters</b> para investimentos econômicos no território cearense</h2>
+        
+                    <div class="accordion__container">
+                        <div class="city" id="city"></div>
+        
+                        <div class="accordion js-accordion">
+                            <div class="accordion__header js-accordion-header">Localização</div>
+                            <div class="accordion__content js-accordion-content localization"></div>
+                        </div>
+                        <div class="accordion js-accordion">
+                            <div class="accordion__header js-accordion-header">Infraestrutura</div>
+                            <div class="accordion__content js-accordion-content infrastructure"></div>
+                        </div>
+                        <div class="accordion js-accordion">
+                            <div class="accordion__header js-accordion-header">Potencial Econômico</div>
+                            <div class="accordion__content js-accordion-content economic-potential"></div>
+                        </div>
+                        <div class="accordion js-accordion">
+                            <div class="accordion__header js-accordion-header">Quem já investe</div>
+                            <div class="accordion__content js-accordion-content investments"></div>
+                        </div>
+        
+                        <div class="video"></div>
+                    </div>
+        
+                    <button class="return"><i class="fas fa-reply"></i></button>
+                </div>
+        
+                <div id="map" class="map"></div>
+        
+                <div class="products">
+                    <h2>Selecione o tipo de produto por setor econômico</h2>
+        
+                    <div class="products__container">
+                        <div class="products-item" id="health">
+                            <i class="fas fa-heartbeat"></i>
+                            <p>Cadeia produtiva de saúde</p>
+                        </div>
+                        <div class="products-item" id="renewable-energy">
+                            <i class="fas fa-charging-station"></i>
+                            <p>Energias Renováveis</p>
+                        </div>
+                        <div class="products-item" id="water-security">
+                            <i class="fas fa-tint"></i>
+                            <p>Rede de segurança hídrica</p>
+                        </div>
+                        <div class="products-item" id="innovation-tic">
+                            <i class="fas fa-globe"></i>
+                            <p>Polo de inovação em tic</p>
+                        </div>
+                        <div class="products-item" id="textiles-shoes">
+                            <i class="fas fa-socks"></i>
+                            <p>Têxtil e Calçados</p>
+                        </div>
+                        <div class="products-item" id="agribusiness">
+                            <i class="fas fa-tractor"></i>
+                            <p>Agronegócio</p>
+                        </div>
+                        <div class="products-item" id="logistics">
+                            <i class="fas fa-clipboard-list"></i>
+                            <p>Logística</p>
+                        </div>
+                        <div class="products-item" id="hubs">
+                            <i class="fab fa-hubspot"></i>
+                            <p>Hubs: Aéreo | Portuário | Tecnológico</p>
+                        </div>
+                        <div class="products-item" id="economy-sea">
+                            <i class="fas fa-water"></i>
+                            <p>Economia do Mar</p>
+                        </div>
+                        <div class="products-item" id="tourism">
+                            <i class="fas fa-umbrella-beach"></i>
+                            <p>Turismo</p>
+                        </div>
+                        <div class="products-item" id="creativy-economy">
+                            <i class="fas fa-users-cog"></i>
+                            <p>Economia Criativa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/map.js"></script>
+        <script src="./js/accordion.js"></script>
+    </body>
+</html>
