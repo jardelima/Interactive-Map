@@ -53,6 +53,8 @@ Após a instalação ser concluída, no mesmo terminal, digite:
 
 E o projeto vai rodar na sua máquina. Provavelmente no <b>localhost:3000</b>, mas caso não esteja nessa porta, verifique no terminal em qual porta está sendo rodado o projeto.
 
+<b>OBS: APENAS O PRIMEIRO PRODUTO "CADEIA PRODUTIVA DE SAÚDE" ESTÁ COM TODO CÓDIGO JS INCLUSO COMO FORMA DE APRESENTAÇÃO DO PROJETO. OS TEXTOS SÃO MERAMENTE ILUSTRATIVOS</b>
+
 ## Autor :grin:
 <b>Jardel Lima Batista</b> 
 
