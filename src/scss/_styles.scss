@@ -18,6 +18,13 @@ $font-family-primary: 'Montserrat';
         justify-content: space-between;
         flex-direction: column-reverse;
 
+        @media (min-width: 1200px) {
+            flex-direction: row;
+            width: 100%;
+            max-width: 90rem;
+            margin: 0 auto;
+        }
+
         &.container-fade {
             animation: container-fade-in 1s forwards;
 
@@ -37,6 +44,10 @@ $font-family-primary: 'Montserrat';
                 path {
                     &.path-active {
                         fill: #b9be71;
+                    }
+
+                    &.path-cursor {
+                        cursor: pointer;
                     }
                 }
             }
@@ -217,11 +228,11 @@ $font-family-primary: 'Montserrat';
                     font-family: $font-family-primary;
                     color: #fff;
                     font-weight: 600;
-                    font-size: 20px;
+                    font-size: 24px;
                     text-transform: uppercase;
                     border-bottom: 1px solid #6ae693;
                     margin-bottom: 5px;
-                    padding-left: 1rem;
+                    padding-left: 2.6rem;
                     width: 90%;
                 }
 
@@ -237,13 +248,25 @@ $font-family-primary: 'Montserrat';
                         color: #fff;
                         font-family: $font-family-primary;
                         font-weight: 600;
-                        font-size: 20px;
+                        font-size: 18px;
                         text-transform: uppercase;
                         position: relative;
+
+                        &.is-active {
+                            i {
+                                transform: rotate(90deg);
+                            }
+                        }
+
+                        i {
+                            margin-right: 10px;
+                            transition: 400ms;
+                        }
                     }
 
                     .js-accordion-content {
                         margin-top: 10px;
+                        margin-left: 26px;
                         color: #fff;
                         font-family: $font-family-primary;
                         font-weight: 400;
@@ -274,6 +297,7 @@ $font-family-primary: 'Montserrat';
                 &:hover {
                     color: #6ae693;
                     border-color: #6ae693;
+                    cursor: pointer;
                 }
             }
         }

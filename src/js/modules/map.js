@@ -1,4 +1,4 @@
-function mapState() {
+export default function mapState() {
     const src = Raphael('map', '599.953', '776.571');
 
     const cities = src.set();
@@ -393,6 +393,14 @@ function mapState() {
         });
     }
 
+    let activePointer = () => {
+        paths.forEach(path => {
+            if(path.getAttribute("fill") == "#6ae693") {
+                path.classList.add("path-cursor");
+            }
+        });
+    }
+
     let infoCity = () => {
         paths.forEach(path => {
             if(path.getAttribute("fill") == "#6ae693") {
@@ -440,10 +448,14 @@ function mapState() {
                 btn.classList.remove("product--active");
             });
 
+            paths.forEach(path => {
+                path.classList.remove("path-cursor");
+            });
+
             btn.classList.add("product--active");
 
             activeCity(btn.id);
-
+            activePointer();
             infoCity();
         });
     });
@@ -462,5 +474,3 @@ function mapState() {
         }, 700);
     });
 } 
-
-mapState();
