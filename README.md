@@ -1,5 +1,5 @@
 # Mapa Interativo do Ceará
-O projeto da Sedet tem como objetivo mapear o estado do Ceará e fornecer informações econômicas sobre os municípios.
+O projeto tem como objetivo mapear o estado do Ceará e fornecer informações econômicas sobre os municípios.
 
 O usuário será capaz de navegar entre cada município, contanto que algum produto econômico esteja ativado, por exemplo: Clico em "Energias Renováveis" e no mapa me mostrará os municípios com tal produto.
 
